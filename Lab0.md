@@ -19,5 +19,21 @@ Sử dụng kết hợp GitHub và PlantText để viết tài liệu thiết k�
 ### Biểu đồ gói này tổ chức các lớp thành hai gói: Gói Chính chứa các lớp Person, Student, và Teacher, còn Gói Hệ Thống chứa các thành phần Authentication và Authorization.
 ![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niK90Qb5nVfv2DPS220IN56NcfIla9UQcGWGoyqeK4jEXdBByp1I5ueBKn6mDJQvQBgW9mIMbAQb0PQaL9QbvAUWcWWmeXgZmT44s1YXMYMnCI6fYSaPg4GvZe0uhBatAIaqkGJAd1AGDOWvKXqsDhYxCKIXYK1ku783cWm800000__y30000 )
 
+# Hướng Dẫn Tạo Tài Khoản Git và GitHub
+
+## Tạo Tài Khoản GitHub
+
+GitHub là nền tảng lưu trữ mã nguồn phổ biến. Để tạo tài khoản trên GitHub, làm theo các bước sau:
+1. Truy cập trang web GitHub tại: [https://github.com/](https://github.com/)
+2. Nhấn vào nút **Sign up** ở góc trên bên phải màn hình.
+3. Điền các thông tin:
+   - **Email address**: Nhập địa chỉ email của bạn.
+   - **Password**: Tạo một mật khẩu mạnh.
+   - **Username**: Đặt tên người dùng mà bạn muốn sử dụng.
+4. Chọn **Verify** và làm theo hướng dẫn để xác minh bạn không phải là robot.
+5. Chọn **Create account** để hoàn tất đăng ký.
+6. Xác nhận email nếu cần thiết.
+
+
 
 
