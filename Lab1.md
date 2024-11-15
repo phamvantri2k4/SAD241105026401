@@ -1,30 +1,84 @@
-**PHÂN TÍCH KIẾN TRÚC, CƠ CHẾ, CA SỬ DỤNG**
-# Lab 1: Phân Tích Kiến Trúc, Cơ Chế, Ca Sử Dụng của Payroll System
-
-## Mục đích
-Phân tích kiến trúc và các ca sử dụng của hệ thống "Payroll System".
-
-## Thực hiện
-1. **Phân tích yêu cầu** để đề xuất kiến trúc phù hợp cho bài toán, giải thích.
-2. **Phân tích yêu cầu** để đề xuất các cơ chế (phân tích) cần giải quyết trong bài toán.
-3. **Phân tích 02 ca sử dụng**:
-   - Select Payment
-   - Maintain Timecard
-
----
+# Phân Tích Kiến Trúc và Ca Sử Dụng Hệ Thống "Payroll System"
 
 ## 1. Phân Tích Kiến Trúc
 
 ### Đề xuất kiến trúc
-Kiến trúc phù hợp là kiến trúc **Client-Server dựa trên mô hình phân tán**, đáp ứng các yêu cầu:
-- **Tích hợp cơ sở dữ liệu**: Giao tiếp với cơ sở dữ liệu cũ mà không cập nhật nó.
-- **Giao diện desktop**: Tương thích với hệ điều hành Windows, đáp ứng cho các thao tác của nhân viên.
-- **Bảo mật cao**: Kiểm soát quyền truy cập của nhân viên, giới hạn chỉ chỉnh sửa thông tin cá nhân.
 
-### Biểu đồ Package mô tả kiến trúc
+Hệ thống Payroll sẽ sử dụng kiến trúc **Client-Server** với ba lớp chính: **Client**, **Application Server**, và **Database Server**.
 
-- **Client Application**: Giao diện trên máy tính Windows để nhân viên và quản trị viên tương tác với hệ thống.
-- **Application Server**: Xử lý các yêu cầu từ client, bao gồm chấm công, tính lương và truy xuất cơ sở dữ liệu cũ.
-- **Database Server**: Lưu trữ thông tin về nhân viên và tương tác với Project Management Database thông qua các interface SQL.
+- **Client**: Đây là giao diện người dùng (Windows-based desktop interface) cho phép nhân viên nhập liệu, xem báo cáo và thay đổi các thông tin cá nhân. Các yêu cầu từ client sẽ được gửi đến application server để xử lý.
+  
+- **Application Server**: Lớp này sẽ xử lý các nghiệp vụ như tính toán lương, lưu trữ thông tin nhân viên, báo cáo, và các tính toán liên quan đến thời gian làm việc và hoa hồng. Hệ thống này sẽ giao tiếp với cơ sở dữ liệu và gửi các yêu cầu thanh toán đến các phương thức thanh toán.
 
+- **Database Server**: Chứa các thông tin về nhân viên, lịch sử thanh toán, thông tin thời gian làm việc và các dữ liệu khác. Hệ thống sẽ truy vấn dữ liệu từ cơ sở dữ liệu **Project Management Database** (DB2), nhưng không thực hiện bất kỳ thao tác cập nhật nào.
+
+### Lý do lựa chọn kiến trúc
+
+Kiến trúc Client-Server giúp tách biệt các vai trò, dễ dàng bảo trì và mở rộng. Dữ liệu nhạy cảm về nhân viên được bảo vệ trong lớp riêng biệt, giúp giảm thiểu rủi ro bảo mật. Hệ thống có thể hoạt động trên nhiều máy tính cá nhân trong công ty mà không cần thay đổi cơ sở hạ tầng.
+
+### Biểu đồ Package
+
+
+
+## 2. Cơ Chế Phân Tích
+
+Các cơ chế chính cần giải quyết trong hệ thống này bao gồm:
+
+- **Xác thực và phân quyền**: Đảm bảo chỉ nhân viên có quyền truy cập vào thời gian làm việc của chính họ và quản trị viên có thể quản lý thông tin của tất cả nhân viên.
+  
+- **Tính toán lương**: Hệ thống cần tính toán chính xác số tiền lương cho các nhân viên, bao gồm lương theo giờ, lương cố định, và lương cố định cộng với hoa hồng.
+
+- **Quản lý thời gian làm việc và đơn hàng**: Cần có cơ chế lưu trữ và xử lý chính xác thông tin về thời gian làm việc của nhân viên và các đơn hàng đã thực hiện.
+
+- **Xử lý thanh toán tự động**: Hệ thống cần tự động tính toán và thực hiện các khoản thanh toán cho nhân viên vào ngày quy định mà không cần sự can thiệp thủ công.
+
+---
+
+## 3. Phân Tích Ca Sử Dụng "Select Payment"
+
+### Các lớp phân tích
+
+- **Employee**: Nhân viên yêu cầu thanh toán và cung cấp thông tin về phương thức thanh toán và ngày thanh toán.
+- **PayrollSystem**: Hệ thống tính toán số tiền lương và gửi thông tin thanh toán đến **PaymentMethod**.
+- **PaymentMethod**: Lớp này xác định phương thức thanh toán cho nhân viên, bao gồm chuyển khoản ngân hàng, gửi qua bưu điện, hoặc nhận trực tiếp tại văn phòng.
+
+### Biểu đồ Sequence
+
+
+
+## 4. Phân Tích Ca Sử Dụng "Maintain Timecard"
+
+### Các lớp phân tích
+
+- **Employee**: Nhân viên cung cấp thông tin về thời gian làm việc của họ và các dự án liên quan, nhập số giờ đã làm cho mỗi ngày và mỗi charge number (mã dự án).
+- **Timecard**: Lớp này lưu trữ các bản ghi thời gian làm việc của nhân viên. Mỗi bản ghi bao gồm thông tin về ngày làm việc, số giờ làm việc, và charge number (mã dự án).
+- **PayrollSystem**: Xử lý và lưu trữ thông tin thời gian làm việc vào hệ thống. Sau khi nhân viên nhập thời gian làm việc, hệ thống sẽ tính toán tổng số giờ, xác định việc trả lương theo kiểu gì (theo giờ, lương cố định), và lưu trữ thông tin này để thanh toán vào các ngày thanh toán quy định.
+
+### Biểu đồ Sequence
+
+## 5. Hợp Nhất Kết Quả Phân Tích
+
+### Tổng quan về các ca sử dụng
+
+Hệ thống "Payroll System" được phân tích thông qua hai ca sử dụng chính: **Select Payment** và **Maintain Timecard**. Mỗi ca sử dụng có mục đích và hành vi riêng biệt, nhưng đều liên quan mật thiết đến các hoạt động xử lý lương cho nhân viên.
+
+1. **Ca sử dụng "Select Payment"**:
+   - Mục đích: Xử lý yêu cầu thanh toán của nhân viên và xác định phương thức thanh toán (chuyển khoản ngân hàng, gửi qua bưu điện, hoặc nhận trực tiếp tại văn phòng).
+   - Các lớp phân tích liên quan: **Employee**, **PayrollSystem**, **PaymentMethod**.
+   - Hành vi chính: Nhân viên yêu cầu thanh toán, hệ thống tính toán và gửi yêu cầu thanh toán tới phương thức thanh toán đã chọn.
+
+2. **Ca sử dụng "Maintain Timecard"**:
+   - Mục đích: Xử lý và lưu trữ thông tin về thời gian làm việc của nhân viên và các dự án họ tham gia. Hệ thống tính toán số tiền lương dựa trên thời gian làm việc và phương thức thanh toán.
+   - Các lớp phân tích liên quan: **Employee**, **Timecard**, **PayrollSystem**.
+   - Hành vi chính: Nhân viên nhập thời gian làm việc, hệ thống lưu trữ thời gian và tính toán lương theo giờ hoặc lương cố định.
+
+### Hợp nhất các kết quả phân tích
+
+#### Các lớp phân tích chung
+
+- **Employee**: Là người yêu cầu thanh toán và cung cấp thông tin về thời gian làm việc và các dự án tham gia.
+- **PayrollSystem**: Lớp trung gian xử lý các yêu cầu thanh toán và tính toán lương cho nhân viên. Đối với "Maintain Timecard", hệ thống tính toán lương từ số giờ làm việc và lưu trữ thông tin. Đối với "Select Payment", hệ thống gửi yêu cầu thanh toán tới phương thức thanh toán đã được nhân viên chọn.
+- **PaymentMethod**: Xác định phương thức thanh toán cho nhân viên, thực hiện việc thanh toán dựa trên yêu cầu từ PayrollSystem.
+
+#### Biểu đồ Sequence tổng hợp
 
