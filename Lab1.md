@@ -31,7 +31,8 @@ Các cơ chế chính cần giải quyết trong hệ thống này bao gồm:
 
 - **Xử lý thanh toán tự động**: Hệ thống cần tự động tính toán và thực hiện các khoản thanh toán cho nhân viên vào ngày quy định mà không cần sự can thiệp thủ công.
 
-### b
+### Biểu đồ 
+![Diagram](https://www.planttext.com/api/plantuml/png/X9DDJiCm48NtFiMe-ru1DGeL6v0gMbQeYy4PfHR-a-qiBDIJiU18N06Rj914JkFjDs_UcnVb-_DhumEwq2d9BF9tR0bMEupEI0dxw0Ef5NmmIEyFrrAG3l28aTmLvlVwuib1rOLJme9Z44OV_sd5ENaFjT4XRU_1cOrNLzRAYxAm_vghHiaxsKyz4J-X5buTHtCg9zmvaos5RWVmcQnn0Hv8anj4d2Qvnu1lwAaG8oFOQkwYdPxODI8LOzfsxBbLLff81B_IVJ0kUGpuGIZYw9e2l-GgTWlhzLsvruMgUk5SJOMAUi6DCsOrCwUnOfFBDcN5ZVuctsJPeJG_i__CDgIR_Ely0000__y30000)
 
 ## 3. Phân Tích Ca Sử Dụng "Select Payment"
 
