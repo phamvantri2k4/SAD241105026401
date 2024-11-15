@@ -42,8 +42,8 @@ Các cơ chế chính cần giải quyết trong hệ thống này bao gồm:
 - **PayrollSystem**: Hệ thống tính toán số tiền lương và gửi thông tin thanh toán đến **PaymentMethod**.
 - **PaymentMethod**: Lớp này xác định phương thức thanh toán cho nhân viên, bao gồm chuyển khoản ngân hàng, gửi qua bưu điện, hoặc nhận trực tiếp tại văn phòng.
 
-### Biểu đồ Sequence
-
+### Biểu đồ 
+![Diagram](https://www.planttext.com/api/plantuml/png/V98xRi90441xds94bHGqEK140XIHY8H8EkHYM4-iXVrfTbnOKKwM8aVY2gmj35WssNBUVDxixl7tRnO5MIfhie3gW2N1P8qrUsFWeuv2TWBV6QHpmNEZoGcii2RkO7EsInkChudWpGdn5ohAht13mRECeazjII4N2OPgaFAJzSU_X62qGj7UZJXqxdCqgZ9jrjYaTtIfcKrxvBtQ9W9hzefYrAuS-ASOB5sftHsv1GhkCD9_jzFbZ7arB1zkio7bkOYtXFsUbDmiqjR2m-BrwR5pItRR_cFcC9q-twrkpSyTPkIAvbUS0000__y30000)
 
 
 ## 4. Phân Tích Ca Sử Dụng "Maintain Timecard"
