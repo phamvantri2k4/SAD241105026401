@@ -17,8 +17,7 @@ Hệ thống Payroll sẽ sử dụng kiến trúc **Client-Server** với ba l�
 Kiến trúc Client-Server giúp tách biệt các vai trò, dễ dàng bảo trì và mở rộng. Dữ liệu nhạy cảm về nhân viên được bảo vệ trong lớp riêng biệt, giúp giảm thiểu rủi ro bảo mật. Hệ thống có thể hoạt động trên nhiều máy tính cá nhân trong công ty mà không cần thay đổi cơ sở hạ tầng.
 
 ### Biểu đồ Package
-
-
+https://www.planttext.com/api/plantuml/png/V5ExJWCn4Epz5QjKKAJX0r0WIO44KXJeeYiMtt8o-2NRLvmGNqR19_4B-7Ava8ljkFJCpixEsh_VFmiVq8LMIMQHVs13CDjWvuoKyDpvG6e6dmpYES9BAKW7UCIEt0ZsPxTMLfgE21vq8FU6dAf_S4lMk925NeGYZgwEe6qJoXURjh-pLWgEGHYTyJ1wNwBahTopSfsUK4Sn5UUe9hNz3MoSuUIzq4tYFzx1MZT25yojCE0hUhgKpiZ9-UgnAfrcIzousfyYphmJ3oU3x6lXQdL_SprwY-voIu7v_BQGLBgcWPnENzxQK96DccMx3WMPVB8YP_93OhdTJSSyHfZEKkvVe2QQR9UyoWDr-Y2YvDd5GV3oDXUaw_w7_W400F__0m00
 
 ## 2. Cơ Chế Phân Tích
 
