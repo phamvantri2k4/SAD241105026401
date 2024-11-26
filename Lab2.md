@@ -16,7 +16,7 @@ Hệ thống **Payroll System** có các thành phần chính:
 
 Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll System bao gồm các ca sử dụng sau:
 
-1. ## Maintain Timecard 
+ ### 1. Maintain Timecard 
 **Mô tả:** Nhân viên nhập giờ làm việc, chọn mã dự án (charge number), và lưu thông tin.  
 **Các bước:**
 1. Nhân viên mở bảng chấm công hiện tại.
@@ -30,7 +30,7 @@ Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll Sy
 
 ---
 
-2. # Generate Paycheck
+ ### 2. Generate Paycheck
 **Mô tả:** Hệ thống tính toán lương dựa trên bảng chấm công và thông tin nhân viên, sau đó tạo phiếu lương.  
 **Các bước:**
 1. Hệ thống tổng hợp giờ làm việc từ các bảng chấm công.
@@ -44,7 +44,7 @@ Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll Sy
 
 ---
 
-3. # Process Purchase Order (Xử lý đơn mua hàng)
+### 3. Process Purchase Order (Xử lý đơn mua hàng)
 **Mô tả:** Hệ thống xử lý các đơn mua hàng của nhân viên.  
 **Các bước:**
 1. Nhân viên gửi yêu cầu mua hàng.
@@ -57,7 +57,7 @@ Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll Sy
 
 ---
 
-4. # View Project Details (Xem chi tiết dự án)
+### 4. View Project Details (Xem chi tiết dự án)
 **Mô tả:** Nhân viên hoặc quản lý xem thông tin chi tiết về các dự án, bao gồm mã dự án và tiến độ.  
 **Các bước:**
 1. Hệ thống hiển thị danh sách dự án.
@@ -69,7 +69,7 @@ Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll Sy
 
 ---
 
-5. # Bank System Integration (Tích hợp hệ thống ngân hàng)
+ ### 5. Bank System Integration (Tích hợp hệ thống ngân hàng)
 **Mô tả:** Hệ thống tích hợp với ngân hàng để thực hiện giao dịch trả lương cho nhân viên.  
 **Các bước:**
 1. Tổng hợp phiếu lương đã tạo.
@@ -82,7 +82,7 @@ Dựa trên hình ảnh và thông tin bạn cung cấp, hệ thống Payroll Sy
 
 ---
 
-6. # Manage Employee Details (Quản lý thông tin nhân viên)
+ ### 6. Manage Employee Details (Quản lý thông tin nhân viên)
 **Mô tả:** Hệ thống cho phép quản lý thông tin nhân viên, bao gồm tạo mới, chỉnh sửa, hoặc xóa thông tin.  
 **Các bước:**
 1. **Tạo mới nhân viên:**
@@ -120,11 +120,17 @@ Hệ thống **Payroll System** hiện tại bao gồm **6 ca sử dụng chính
 ### **Ca sử dụng: Process Purchase Order**
 ![diagram](https://www.planttext.com/api/plantuml/png/UhzxlsjkGKv-PMggWgwTGa1fKN96Od6gVr5AQf5pVbv9KNvEJcgHWfM2Sr5gOacgGbvgkK81L952FaWL5ouzwCO13GbBpCbC0Hc3HIT8lKjYIM8Io6GhXU34ibIyDe7KmvqET5z-NbfcKQv2SMboScfnCG000F__0m00)
 
-### **Ca sử dụng: View Project Details**
+### **Ca sử dụng: View ProjectManagementDatabase**
 ![diagram](https://www.planttext.com/api/plantuml/png/UhzxlsjkGKv-PMggWgwTGa1HVbPgSeblObvYUcfkQbw9Is99Ob9YSQg2bK9GQc5fQd69GW54ZK9AQabYPaun5suzG0FXXbif1AVcfS0rvsGMbm00003__mC0)
 
 ### **Ca sử dụng: Bank System Integration**
 ![diagram](https://www.planttext.com/api/plantuml/png/UhzxVq1YPN96QdAsWgwTWbDYNdPmPN59Qgw2bK9mQbwAGa5YPMvgNeb2PbvQVb5kOabcVXuNaYgW7hX-AmNd_BoqpA9SXPAYnBpYn6IGOeNYqkJarE9Y00000F__0m00)
+
+### **Maintain Timecard**
+![diagram](https://www.planttext.com/api/plantuml/png/b8yn3i8m34Ntdi8Nu08CB52OAY411t0JqnObSUMubJWR0qVY2cHefI04Wi6BzTx_-e_RlVIzuoiHB5Pmx3mP5BjbyR242hkWwK2dV_42PCAQWmexHvAq7IcOGOI2lfiPcVcJDTDWAVMw-C7Q2r_8Q8K16_AfPeEADKQQorkKXi2mfLXysLS6JO4j3nBXp39xOV0rIVnjxActgFJ7pWEE6Vu4003__mC0)
+
+### **Employee**
+![diagram](https://www.planttext.com/api/plantuml/png/d94x3e9048PxJZ4NCFOMDZuI2XiV1nYN7zr4Td6P9V5i5Xx9AxY0A4Ini9tyZ-_FtA-tHPQVx0MWqPIsEeDYbyGczn8RWKjPWIQqnjcZ419BFazOGFAKHWEUJjgA3H-GmKX8si0aBpE5A8w-w8AxvPe7oPwBYc89KKT22roRFsITukfMmulJAF5lxKQimtZNtztFg9k69eT-xmmfQrBjCXPj3TcK2YwHz4Vy_C6iyRy9caz43m000F__0m00)
 
 ## 4. Các lớp cần thiết cho các ca sử dụng
 - **Employee:** Cung cấp thông tin nhân viên.
