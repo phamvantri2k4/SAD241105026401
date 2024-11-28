@@ -141,65 +141,164 @@ Hệ thống **Payroll System** hiện tại bao gồm **6 ca sử dụng chính
 - **BankSystem:** Hệ thống ngân hàng xử lý thanh toán.
 
   # Mô phỏng Java cho ca sử dụng Maintain Timecard*
-  
+  ### Class Employee
 ```java
-class Timecard {
-    private String employeeId; 
-    private int hoursWorked;   
-    private boolean isSubmitted;
 
-    public Timecard(String employeeId) {
+public class Employee {
+    private int employeeId;
+    private String name;
+
+    public Employee(int employeeId, String name) {
         this.employeeId = employeeId;
-        this.hoursWorked = 0;
-        this.isSubmitted = false;
+        this.name = name;
     }
-    // Them gio lam viec
-    public void addHours(int hours) {
-        if (isSubmitted) {
-            System.out.println("Loi: Bang cham cong da gui. Khong the them gio.");
-            return;
-        }
-        if (hours < 0 || hours > 24) {
-            System.out.println("Loi: Gio lam viec khong hop le (0-24).");
-            return;
-        }
-        hoursWorked += hours;
-        System.out.println("Da them " + hours + " gio. Tong gio hien tai: " + hoursWorked);
+
+    public int getEmployeeId() {
+        return employeeId;
     }
-    // Gui bang cham cong
-    public void submit() {
-        if (isSubmitted) {
-            System.out.println("Loi: Bang cham cong da gui truoc do.");
-            return;
-        }
-        if (hoursWorked == 0) {
-            System.out.println("Loi: Khong the gui bang cham cong voi tong gio = 0.");
-            return;
-        }
-        isSubmitted = true;
-        System.out.println("Bang cham cong da gui thanh cong.");
-    }
-    public void display() {
-        System.out.println("=== Thong tin bang cham cong ===");
-        System.out.println("Ma nhan vien: " + employeeId);
-        System.out.println("Tong gio lam viec: " + hoursWorked);
-        System.out.println("Trang thai: " + (isSubmitted ? "Da gui" : "Chua gui"));
-        System.out.println("===============================");
+
+    public String getName() {
+        return name;
     }
 }
-public class MaintainTimecardApp {
+```
+### Class ProjectManagementDatabase
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class ProjectManagementDatabase {
+    // Simulate retrieving charge numbers from the database
+    public List<String> getChargeCodes() {
+        return Arrays.asList("MS01", "MS02", "MS03", "MS04");
+    }
+}
+```
+### Class Timecard
+```java
+import java.time.LocalDate;
+
+public class Timecard {
+    private int employeeId;
+    private LocalDate date;
+    private double hoursWorked;
+    private String chargeNumber;
+
+    public Timecard(int employeeId, LocalDate date, double hoursWorked, String chargeNumber) {
+        this.employeeId = employeeId;
+        this.date = date;
+        this.hoursWorked = hoursWorked;
+        this.chargeNumber = chargeNumber;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public String getChargeNumber() {
+        return chargeNumber;
+    }
+
+    public void setChargeNumber(String chargeNumber) {
+        this.chargeNumber = chargeNumber;
+    }
+}
+```
+### Class TimecardController
+```java
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TimecardController {
+    private List<Timecard> timecards;
+    private ProjectManagementDatabase database;
+
+    public TimecardController() {
+        this.timecards = new ArrayList<>();
+        this.database = new ProjectManagementDatabase();
+    }
+
+    // Lấy hoặc tạo mới bảng chấm công cho một nhân viên
+    public Timecard getTimecard(int employeeId, LocalDate date) {
+        for (Timecard t : timecards) {
+            if (t.getDate().equals(date) && t.getEmployeeId() == employeeId) {
+                return t;
+            }
+        }
+        // Tạo mới nếu không tìm thấy bảng chấm công
+        Timecard newTimecard = new Timecard(employeeId, date, 0, null);
+        timecards.add(newTimecard);
+        return newTimecard;
+    }
+
+    // Hiển thị danh sách mã dự án
+    public void displayChargeCodes() {
+        System.out.println("danh sach ma du an co san:");
+        for (String code : database.getChargeCodes()) {
+            System.out.println(" - " + code);
+        }
+    }
+
+    // Lưu bảng chấm công
+    public void saveTimecard(Timecard timecard) {
+        System.out.println("Da luu bang cham cong:");
+        System.out.println("Ma nhan vien: " + timecard.getEmployeeId());
+        System.out.println("Ngay: " + timecard.getDate());
+        System.out.println("So gio lam viec: " + timecard.getHoursWorked());
+        System.out.println("Ma du an: " + timecard.getChargeNumber());
+    }
+}
+```
+### Class MaintainTimecardFlow
+``` java
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class MaintainTimecardFlow {
     public static void main(String[] args) {
-        Timecard timecard = new Timecard("NV001");
+        Scanner scanner = new Scanner(System.in);
+        TimecardController controller = new TimecardController();
 
-        // Them gio lam viec
-        timecard.addHours(5);
-        timecard.addHours(3);
-        timecard.display();
+        // Thông tin nhân viên giả lập
+        Employee employee = new Employee(1, "Nguyen Van A");
 
-        // gui bang cham cong
-        timecard.submit();
-        // them gio sau khi gui
-        timecard.addHours(2);
-        timecard.display();
+        // Bước 1: Bắt đầu quy trình
+        System.out.println("Duy tri bang cham cong cho nhan vien: " + employee.getName());
+        LocalDate today = LocalDate.now();
+
+        // Bước 2: Lấy bảng chấm công hiện tại
+        Timecard timecard = controller.getTimecard(employee.getEmployeeId(), today);
+        System.out.println("Da truy xuat bang cham cong ngay: " + today);
+
+        // Bước 3: Hiển thị danh sách mã dự án
+        controller.displayChargeCodes();
+
+        // Bước 4: Nhập số giờ làm việc và mã dự án
+        System.out.print("Nhap so gio lam viec: ");
+        double hoursWorked = scanner.nextDouble();
+        System.out.print("Nhap ma du an: ");
+        String chargeNumber = scanner.next();
+
+        timecard.setHoursWorked(hoursWorked);
+        timecard.setChargeNumber(chargeNumber);
+
+        // Bước 5: Lưu bảng chấm công
+        controller.saveTimecard(timecard);
+
+        scanner.close();
     }
 }
+```
