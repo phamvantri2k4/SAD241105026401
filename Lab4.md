@@ -29,6 +29,7 @@ Nhân viên nhập và chỉnh sửa bảng chấm công, gồm thông tin giờ
 **- Giải thích thiết kế:**
 
 **Tính tách biệt: TimecardController tập trung xử lý logic nhập liệu, tách biệt khỏi giao diện và cơ sở dữ liệu.**
+
 **Đảm bảo tính toàn vẹn: Kiểm tra mã dự án trước khi lưu giúp tránh lỗi nhập sai.**
 
 ## **2. Generate Paycheck (Tạo phiếu lương)**
@@ -50,6 +51,7 @@ Hệ thống tự động tính toán lương dựa trên bảng chấm công v�
 **- Giải thích thiết kế:**
 
   **Tính chính xác: Logic tính toán lương tập trung tại PayrollController đảm bảo dễ bảo trì và kiểm tra.**
+  
   **Tái sử dụng: PaycheckRepository có thể được tích hợp thêm với các hệ thống khác như ngân hàng.** 
 
 ## **3. Process Purchase Order (Xử lý đơn mua hàng)**
@@ -70,6 +72,7 @@ Hệ thống xử lý các yêu cầu mua hàng từ nhân viên, kiểm tra tí
 **- Giải thích thiết kế:**
 
   **Tích hợp dễ dàng: Yêu cầu mua hàng có thể được mở rộng xử lý qua các hệ thống tài chính khác.**
+  
   **Kiểm tra dữ liệu: Đảm bảo yêu cầu hợp lệ trước khi lưu.**
 
 ## **4. Bank System Integration (Tích hợp ngân hàng)**
@@ -90,6 +93,7 @@ Hệ thống gửi thông tin phiếu lương đến ngân hàng để thực hi
 **- Giải thích thiết kế:**
 
 **Đảm bảo an toàn: Tích hợp với IBankSystem giúp hệ thống hoạt động đồng bộ với ngân hàng.**
+
 **Khả năng mở rộng: Cho phép thêm các ngân hàng khác dễ dàng thông qua giao diện IBankSystem.**
 
 ## **5. Manage Employee Details (Quản lý thông tin nhân viên)**
@@ -111,6 +115,7 @@ Hệ thống cho phép quản trị viên thêm, sửa, hoặc xóa thông tin n
 **-Giải thích thiết kế:**
 
 **Tính rõ ràng: EmployeeController tập trung logic xử lý, giúp bảo trì dễ dàng.**
+
 **Quản lý dữ liệu: EmployeeRepository đảm bảo lưu trữ dữ liệu an toàn và hiệu quả.**
 
 
