@@ -1,8 +1,8 @@
 
-# **Tài liệu thiết kế các ca sử dụng hệ thống Payroll System**
+# **Thiết kế các ca sử dụng hệ thống Payroll System**
 
 ## **I. Giới thiệu**
-Hệ thống **Payroll System** được thiết kế nhằm tự động hóa quy trình quản lý bảng chấm công, tính toán lương, xử lý thanh toán và tích hợp với các hệ thống liên quan như ngân hàng và cơ sở dữ liệu dự án. Dựa trên phân tích từ Lab 2 và thiết kế phần tử từ Lab 3, chúng ta tiến hành thiết kế chi tiết cho các ca sử dụng và giải thích lý do lựa chọn.
+Hệ thống **Payroll System** được thiết kế nhằm tự động hóa quy trình quản lý bảng chấm công, tính toán lương, xử lý thanh toán và tích hợp với các hệ thống liên quan như ngân hàng và cơ sở dữ liệu dự án.
 
 ---
 ## **II. Class Diagram: Payroll System**
