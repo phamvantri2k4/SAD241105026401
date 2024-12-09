@@ -23,6 +23,10 @@
 
 4. **Tích hợp:**  
    - Sử dụng `ProjectManagementDatabase` để kiểm tra mã dự án.
+  
+5. **Sơ đồ uml biểu đồ con Timecard Management System :**
+   
+   ![diagram](https://www.planttext.com/api/plantuml/png/V9112i9034NtSuhWlXTm8OMAu48GA-xZJ93gp6IOfa8HJ-R28ta5Mw6sYZNBdvV_FtdSxcaf6ALoLWNK9pmGJBQ58utHm0fz8pZo0dbT2ha9N1Gqeza5zgtUiGkERcILiPV8rb8S0JOKk2o4O_q5h2CVIKjVOuw2Uon9lS1XDYJ9x4SYJ67fGzLdGMlnSJs0XnvzgSOZnpEzD_-kHnit9ZkqXK6X3eAC3QchIicRzlzF0000__y30000)
 
 ---
 
@@ -45,6 +49,10 @@
 3. **Tích hợp:**  
    - Gửi yêu cầu thanh toán đến ngân hàng thông qua `IBankSystem`.
 
+4. **Sơ đồ uml biểu đồ con Payroll Processing System :**
+   
+   ![diagram](https://www.planttext.com/api/plantuml/png/V51B2i8m4Dtd54FtlO0BAUh6NMczm90EDRH9IZ8AHJoP2u_a5KnKIccaitcBzsLUZsVX6HrVT2y6b1ss15c9exDz3wMpahnNfeLwz4mwWvk0SDBgmHeo33_ftXgEI2xbvPbaLz5WlMBhneNWk4FJVTCNp4bfakYQcVMZI2eXpxT_Yc03TK2Qg1NtR4MqaMcYKCSP1sHSSQOhGq15x1HTQMAzk8iYfCOtlm400F__0m00)
+   
 ---
 
 ## **3. Hệ thống quản lý nhân sự (Employee Management System)**
@@ -67,7 +75,10 @@
 
 4. **Tích hợp:**  
    - Cung cấp dữ liệu nhân viên cho hệ thống xử lý bảng lương.
-
+     
+5. **Sơ đồ uml biểu đồ con Employee Management System :**
+   
+   ![diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9hRa5EVcLgge9lOXvG83SrhqGXkBAu93LNIQ6QIm48alDp2_BpGE8mjMxvHRauf9ppyqgAydDoKejmA0XABSWlpYp9Bwha0gj0DbD1LzSEYqaALWgUUGMb23CKN19B4b5q8ob6DWDX6T0CY0VH3AdbSaZDIm6520000F__0m00)
 ---
 
 ## **4. Hệ thống quản lý đơn hàng (Purchase Order Management System)**
@@ -88,7 +99,11 @@
 
 4. **Tích hợp:**  
    - Kiểm tra mã dự án hợp lệ từ `ProjectManagementDatabase`.
+     
+5. **Sơ đồ uml biểu đồ con Purchase Order Management System :**
 
+![diagram](https://www.planttext.com/api/plantuml/png/b9512i9034NtSuhWlXTm8OMAEr4ik4_ReDNEfAJfeeWdS-6Hl8BJIgbOMZ2RGER_bn_czNY6bQ9eRGjJOdh54y5YNqjwnefW9na9RD7viIMd43ULabt0pO2lb6t9hfttZiwmOR5pxn4x5IuAaZdLWKgkScLfVbN25qfrIBL6nSJRJ2SSHO4WM4q5W2N4TMBpOVVdvZ7fopFY3L5Rdk_qDsxg9WyyOf5dgDIB8EACpDs4vBBsszu0003__mC0)
+   
 ---
 
 ## **5. Hệ thống tích hợp ngân hàng (Bank Integration System)**
@@ -107,6 +122,10 @@
 3. **Tích hợp:**  
    - Nhận dữ liệu phiếu lương từ `PayrollController`.
    - Gửi yêu cầu thanh toán cho ngân hàng.
+
+4. **Sơ đồ uml biểu đồ con Bank Integration System :**
+
+   ![diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9JObwsWcTUIMfwKM99PdwUGd1bSKbghf92DPS242JdvnRavwNcbIXuWbH29D5aG1AEAOa59Qb5N60f9AKAkhfso0eKh1G2YlAJKukB5G8IAtE1shbgkHnIyr90ZW80003__mC0)
 
 ---
 
@@ -127,6 +146,10 @@
 
 4. **Tích hợp:**  
    - Hỗ trợ kiểm tra mã dự án cho các hệ thống khác.
+     
+5. **Sơ đồ uml biểu đồ con Project Management System :
+   
+    ![diagram](https://www.planttext.com/api/plantuml/png/R91D2i8m48NtESNGVI_WGWeMmONWpmd6E8gQPDfaiYZYoLnu9AzWAb83xUnctfllmNi_NrKGz1AjKGtg6vu9YetdAsc1DRgqMt82-ou8sGBk2j9ejWsx_lwpBjdRQMN1JZmRGtvQ_sVKA7Z0GEfhpC1GblCn3cQmepPI651Ga-35XFm_ysUKSMYYRIFvRc2jt8dLGrNaZdqt7m000F__0m00)
 
 ---
 
