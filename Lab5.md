@@ -150,6 +150,11 @@
 5. **Sơ đồ uml biểu đồ con Project Management System :
    
     ![diagram](https://www.planttext.com/api/plantuml/png/R91D2i8m48NtESNGVI_WGWeMmONWpmd6E8gQPDfaiYZYoLnu9AzWAb83xUnctfllmNi_NrKGz1AjKGtg6vu9YetdAsc1DRgqMt82-ou8sGBk2j9ejWsx_lwpBjdRQMN1JZmRGtvQ_sVKA7Z0GEfhpC1GblCn3cQmepPI651Ga-35XFm_ysUKSMYYRIFvRc2jt8dLGrNaZdqt7m000F__0m00)
+---
+## **Sơ đồ hệ thống con**
+Dưới đây là sơ đồ UML thể hiện các hệ thống con và mối quan hệ phụ thuộc giữa chúng.
+
+![diagram](https://www.planttext.com/api/plantuml/png/Z5LBJiCm4Dtd55Oth7g1Bb2XWDG5ehI8lUiCRMXYMxPJ5A6UZ0L7uWhuKpifSKooYPJtPZnltdZoy_KzbmeBLLTbnZ4vu1sWoGetWfKbsZHIGJL1dndIJu1VYWe85Zbwn5H_g82gFrJp45PnHWtc-GzCL0bumQWonu98aDR0cImK4qqWzUFHT7eTYK0pjC5728ZDSCeknNdjAy48I5dGNLBRcPwiNNF87iWXKdjBMjvYUd0d1RINt0hhfpF2z1i2z4-6pbac56XkYDR7Ewnmj2_t5IzP0p3MTCyVCDt3oSPvKgHn_NYhh1-X1RgA0pQiSLKBiiSIq9F8TSAHIdsK3HgGUy593qkN6H4-aCbDHZos7OyBVT4McCb0IwfW9x0g64qgZyriYnhm9iTSTNHs9yzKtE7eAiztpWzZt2F1te6eqUOu-f0j3aqRuZZjUMPyjhgBhIL_ipWpXkAqqESQj2rUofA-iQxMAxI6qdPVxWikqHRK1m15qkgKbZEmz5Bho_RtMEGWGtHx5L9ZbUhv3BtYiiYnWY1dmNBNc_Zo6Hunjug2_PeZbQY9RKIMkFGZHVVlVzou4Mj0LrfppeIINhwkCJjbSrs_-PF-0W00__y30000)
 
 ---
 
